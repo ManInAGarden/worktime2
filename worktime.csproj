@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{89C89BF9-52E7-49E8-8ADB-B7D8C66EEC76}</ProjectGuid>
+    <SchemaVersion>2</SchemaVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <AssemblyName>worktime</AssemblyName>
+    <OutputType>WinExe</OutputType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include=".\worktimeReferences\\HSp.CsEpo.dll" />
+    <Reference Include="System" />
+    <Reference Include=".\worktimeReferences\\HSp.CsNman.dll" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="C:\Dokumente und Einstellungen\Tiger\Eigene Dateien\Visual Studio 2010\Projects\Worktime2\HSp.Worktime\MonthListDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C:\Dokumente und Einstellungen\Tiger\Eigene Dateien\Visual Studio 2010\Projects\Worktime2\HSp.Worktime\AccountingListDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C:\Dokumente und Einstellungen\Tiger\Eigene Dateien\Visual Studio 2010\Projects\Worktime2\HSp.Worktime\AllgDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C:\Dokumente und Einstellungen\Tiger\Eigene Dateien\Visual Studio 2010\Projects\Worktime2\HSp.Worktime\AllgList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C:\Dokumente und Einstellungen\Tiger\Eigene Dateien\Visual Studio 2010\Projects\Worktime2\HSp.Worktime\MainApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C:\Dokumente und Einstellungen\Tiger\Eigene Dateien\Visual Studio 2010\Projects\Worktime2\HSp.Worktime\WorkBase.cs" />
+    <Compile Include="C:\Dokumente und Einstellungen\Tiger\Eigene Dateien\Visual Studio 2010\Projects\Worktime2\HSp.Worktime\Project.cs" />
+    <Compile Include="C:\Dokumente und Einstellungen\Tiger\Eigene Dateien\Visual Studio 2010\Projects\Worktime2\HSp.Worktime\WorkBaseView.cs" />
+    <Compile Include="C:\Dokumente und Einstellungen\Tiger\Eigene Dateien\Visual Studio 2010\Projects\Worktime2\HSp.Worktime\ProjectView.cs" />
+    <Compile Include="C:\Dokumente und Einstellungen\Tiger\Eigene Dateien\Visual Studio 2010\Projects\Worktime2\HSp.Worktime\WorkClass.cs" />
+    <Compile Include="C:\Dokumente und Einstellungen\Tiger\Eigene Dateien\Visual Studio 2010\Projects\Worktime2\HSp.Worktime\WorkDay.cs" />
+    <Compile Include="C:\Dokumente und Einstellungen\Tiger\Eigene Dateien\Visual Studio 2010\Projects\Worktime2\HSp.Worktime\WorkDayProjectLink.cs" />
+    <Compile Include="C:\Dokumente und Einstellungen\Tiger\Eigene Dateien\Visual Studio 2010\Projects\Worktime2\HSp.Worktime\WorkDayProjectLinkView.cs" />
+    <Compile Include="C:\Dokumente und Einstellungen\Tiger\Eigene Dateien\Visual Studio 2010\Projects\Worktime2\HSp.Worktime\WorkDayView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HSp.Worktime\MainApp.resx">
+      <DependentUpon>MainApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HSp.Worktime\MonthListDialog.resx">
+      <DependentUpon>MonthListDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

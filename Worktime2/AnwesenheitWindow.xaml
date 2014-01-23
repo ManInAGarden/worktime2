@@ -1,0 +1,15 @@
+﻿<Window x:Class="Worktime2.AnwesenheitWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Worktime2 Anwesenheit" Height="468" Width="686" Loaded="Window_Loaded" Icon="/Worktime2;component/Images/calendar.png" ShowInTaskbar="False">
+    <Grid>
+        <ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <TextBlock Margin="5" 
+                       Name="anwesenheitTextBlock" 
+                       Text="TextBlock" 
+                       HorizontalAlignment="Left" 
+                       VerticalAlignment="Top" 
+                       FontFamily="Lucida Console" />
+        </ScrollViewer>
+    </Grid>
+</Window>

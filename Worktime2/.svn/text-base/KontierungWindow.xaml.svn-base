@@ -1,0 +1,35 @@
+﻿<Window x:Class="Worktime2.KontierungWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Worktime2 Kontierung" Height="473" Width="911" Icon="/Worktime2;component/Images/calendar.png" Loaded="Window_Loaded" xmlns:my="clr-namespace:System;assembly=mscorlib">
+    <Window.Resources>
+        <my:Boolean x:Key="AutoGenerateColumns">False</my:Boolean>
+        <Style x:Key="NumericCellStyle" TargetType="DataGridCell">
+            <Setter Property="HorizontalAlignment" Value="Right" />
+        </Style>
+        <Style x:Key="NumericHeaderStyle" TargetType="DataGridColumnHeader">
+            <Setter Property="HorizontalAlignment" Value="Right" />
+        </Style>
+
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="400*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Label Name="titleLabel"></Label>
+        </StackPanel>
+
+        <DataGrid Grid.Row="1" Name="kontierungGrid" VerticalGridLinesBrush="AntiqueWhite" 
+                  HorizontalGridLinesBrush="{x:Null}" 
+                  GridLinesVisibility="Vertical" 
+                  AlternatingRowBackground="AntiqueWhite" 
+                  SelectionMode="Extended" 
+                  Margin="5" 
+                  AutoGenerateColumns="False" SelectionUnit="Cell">
+           
+        </DataGrid>
+    </Grid>
+</Window>
